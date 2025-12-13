@@ -18,3 +18,4 @@ position = Vector2(47, 64)
 
 [node name="Ball" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(47, 43)
+disable_mode = 0
