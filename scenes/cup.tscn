@@ -1,11 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://bige0qi077ug3"]
+[gd_scene load_steps=8 format=3 uid="uid://bige0qi077ug3"]
 
+[ext_resource type="Script" uid="uid://26af4qncv3pu" path="res://scripts/cup.gd" id="1_7q2t1"]
 [ext_resource type="Texture2D" uid="uid://b0gwkqux8pgxo" path="res://assets/sprites/cup.png" id="1_vafus"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssn6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkhl5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yaijh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqvn3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kru4q"]
+
 [node name="Cup" type="AnimatableBody2D"]
+script = ExtResource("1_7q2t1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vafus")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-5, -11, -2, -8, 2, -8, 5, -11, 7, -11, 7, -8, 6, -3, 3, 1, 3, 15, 0, 16, -3, 15, -3, 1, -6, -3, -7, -8, -7, -11)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -3.0
+offset_top = -9.0
+offset_right = 3.0
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ssn6n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kkhl5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yaijh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hqvn3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kru4q")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_up"]
