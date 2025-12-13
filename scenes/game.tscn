@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bau6yxsumbp8u"]
+[gd_scene load_steps=3 format=3 uid="uid://bau6yxsumbp8u"]
 
 [ext_resource type="PackedScene" uid="uid://st83ble0n8b7" path="res://scenes/ball.tscn" id="1_uwrxv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
+bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
+
 [node name="Game" type="Node2D"]
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="Ball" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(47, 43)
