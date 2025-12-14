@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bau6yxsumbp8u"]
+[gd_scene load_steps=7 format=3 uid="uid://bau6yxsumbp8u"]
 
 [ext_resource type="Script" uid="uid://8xbm7l0ir67" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://st83ble0n8b7" path="res://scenes/ball.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bige0qi077ug3" path="res://scenes/cup.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c6cisgtxor0ye" path="res://scenes/rope.tscn" id="3_lnu2h"]
+[ext_resource type="FontFile" uid="uid://dvjsqxhgdjc5a" path="res://assets/fonts/Kenney Mini.ttf" id="5_iywne"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
 bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
@@ -28,3 +29,16 @@ position = Vector2(45, 22)
 position = Vector2(45, 78)
 collision_layer = 2
 collision_mask = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+
+[node name="TimeLeft" type="Label" parent="."]
+offset_left = 68.0
+offset_right = 90.0
+offset_bottom = 22.0
+theme_override_fonts/font = ExtResource("5_iywne")
+text = "20"
+horizontal_alignment = 2

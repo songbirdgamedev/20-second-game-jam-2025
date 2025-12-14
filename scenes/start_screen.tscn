@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://blo5fawxw0emm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cllq7"]
+bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
+
+[node name="StartScreen" type="Node2D"]
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cllq7")
