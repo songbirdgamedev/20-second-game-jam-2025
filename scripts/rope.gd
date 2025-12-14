@@ -2,15 +2,13 @@ extends Node2D
 
 
 @onready var line: Line2D = $Line2D
-@onready var segments: Node2D = $Segments
-
-var joints: Array[PinJoint2D]
-
-
-func _ready() -> void:
-	for segment in segments.get_children():
-		joints.append(segment.get_child(1))
-
+@onready var joints: Array[PinJoint2D] = [
+	$Segments/RigidBody2D/PinJoint2D,
+	$Segments/RigidBody2D2/PinJoint2D2,
+	$Segments/RigidBody2D3/PinJoint2D3,
+	$Segments/RigidBody2D4/PinJoint2D4,
+	$Segments/RigidBody2D4/PinJoint2D5
+]
 
 func _process(_delta: float) -> void:
 	var points: PackedVector2Array = PackedVector2Array()

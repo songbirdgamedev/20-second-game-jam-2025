@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6cisgtxor0ye"]
+[gd_scene load_steps=3 format=3 uid="uid://c6cisgtxor0ye"]
 
 [ext_resource type="Script" uid="uid://bmmbvf7c1ilx0" path="res://scripts/rope.gd" id="1_icxtj"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_icxtj"]
-radius = 1.0036958
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wmsjs"]
 radius = 1.0
@@ -16,27 +13,22 @@ script = ExtResource("1_icxtj")
 width = 2.0
 default_color = Color(0.9607843, 1, 0.9098039, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-0.00022506714, -0.083397865)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CircleShape2D_icxtj")
-
 [node name="Segments" type="Node2D" parent="."]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Segments"]
-position = Vector2(0, 8)
+position = Vector2(0, 7)
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Segments/RigidBody2D"]
 shape = SubResource("CapsuleShape2D_wmsjs")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Segments/RigidBody2D"]
 position = Vector2(0, -7)
-node_a = NodePath("../../../StaticBody2D")
 node_b = NodePath("..")
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="Segments"]
-position = Vector2(0, 22)
+position = Vector2(0, 21)
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Segments/RigidBody2D2"]
 shape = SubResource("CapsuleShape2D_wmsjs")
@@ -47,7 +39,8 @@ node_a = NodePath("../../RigidBody2D")
 node_b = NodePath("..")
 
 [node name="RigidBody2D3" type="RigidBody2D" parent="Segments"]
-position = Vector2(0, 36)
+position = Vector2(0, 35)
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Segments/RigidBody2D3"]
 shape = SubResource("CapsuleShape2D_wmsjs")
@@ -58,7 +51,8 @@ node_a = NodePath("../../RigidBody2D2")
 node_b = NodePath("..")
 
 [node name="RigidBody2D4" type="RigidBody2D" parent="Segments"]
-position = Vector2(0, 50)
+position = Vector2(0, 49)
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Segments/RigidBody2D4"]
 shape = SubResource("CapsuleShape2D_wmsjs")
@@ -67,3 +61,7 @@ shape = SubResource("CapsuleShape2D_wmsjs")
 position = Vector2(0, -7)
 node_a = NodePath("../../RigidBody2D3")
 node_b = NodePath("..")
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="Segments/RigidBody2D4"]
+position = Vector2(0, 7)
+node_a = NodePath("..")

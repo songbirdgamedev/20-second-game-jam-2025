@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bau6yxsumbp8u"]
+[gd_scene load_steps=6 format=3 uid="uid://bau6yxsumbp8u"]
 
+[ext_resource type="Script" uid="uid://8xbm7l0ir67" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://st83ble0n8b7" path="res://scenes/ball.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bige0qi077ug3" path="res://scenes/cup.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c6cisgtxor0ye" path="res://scenes/rope.tscn" id="3_lnu2h"]
@@ -8,6 +9,7 @@
 bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_lbhrr")
 
 [node name="Background" type="Panel" parent="."]
 offset_right = 90.0
@@ -15,14 +17,14 @@ offset_bottom = 90.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="Cup" parent="." instance=ExtResource("1_yqjtg")]
-position = Vector2(47, 64)
-collision_layer = 2
-collision_mask = 2
-
-[node name="Ball" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(47, 43)
+position = Vector2(45, 21)
 collision_layer = 2
 collision_mask = 2
 
 [node name="Rope" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(30, 18)
+position = Vector2(45, 22)
+
+[node name="Ball" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(45, 78)
+collision_layer = 2
+collision_mask = 2
