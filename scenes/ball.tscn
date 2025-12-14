@@ -12,5 +12,4 @@ can_sleep = false
 shape = SubResource("CircleShape2D_n1dj2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.3841858e-07, 2.3841858e-07)
 texture = ExtResource("1_7s4qf")
