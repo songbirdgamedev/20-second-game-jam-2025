@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=3 uid="uid://5upblq6dmegu"]
+
+[ext_resource type="Script" uid="uid://b2hst6dg0n4dx" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="FontFile" uid="uid://dvjsqxhgdjc5a" path="res://assets/fonts/Kenney Mini.ttf" id="2_tbwuq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racf3"]
+bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7m3ot"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3hpu"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irg28"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jtsn"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bugq"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18431373, 0.34117648, 0.3254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_wqhvx")
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_racf3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 81.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 8
+text = "GAME OVER
+Try again?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 18.0
+offset_top = 36.0
+offset_right = 72.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+theme_override_colors/font_focus_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqhvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbwuq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7m3ot")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v3hpu")
+text = "Play Again"
+
+[node name="EndlessButton" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 63.0
+offset_right = 81.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+theme_override_colors/font_focus_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
+theme_override_colors/font_hover_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqhvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_irg28")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2jtsn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8bugq")
+text = "Endless Mode"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_endless_button_pressed"]
