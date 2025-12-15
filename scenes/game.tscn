@@ -69,9 +69,9 @@ offset_bottom = 90.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="MenuButton" type="Button" parent="."]
-offset_left = 41.0
+offset_left = 2.0
 offset_top = 72.0
-offset_right = 88.0
+offset_right = 49.0
 offset_bottom = 88.0
 theme_override_colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
 theme_override_colors/font_focus_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
@@ -117,16 +117,15 @@ autostart = true
 offset_left = 73.0
 offset_right = 90.0
 offset_bottom = 10.0
+theme_override_colors/font_color = Color(0.8745098, 0.8784314, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("5_iywne")
 theme_override_font_sizes/font_size = 8
 text = "20"
 
-[node name="Points" type="Label" parent="."]
-offset_left = 73.0
-offset_right = 90.0
-offset_bottom = 10.0
-theme_override_fonts/font = ExtResource("5_iywne")
-theme_override_font_sizes/font_size = 8
+[node name="WinDelay" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="Cup/WinArea" to="." method="_on_win_area_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -10,6 +10,7 @@ extends Node2D
 	$Segments/RigidBody2D4/PinJoint2D5
 ]
 
+
 func _process(_delta: float) -> void:
 	var points: PackedVector2Array = PackedVector2Array()
 
