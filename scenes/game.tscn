@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bau6yxsumbp8u"]
+[gd_scene load_steps=13 format=3 uid="uid://bau6yxsumbp8u"]
 
 [ext_resource type="Script" uid="uid://8xbm7l0ir67" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://st83ble0n8b7" path="res://scenes/ball.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bige0qi077ug3" path="res://scenes/cup.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c6cisgtxor0ye" path="res://scenes/rope.tscn" id="3_lnu2h"]
 [ext_resource type="FontFile" uid="uid://dvjsqxhgdjc5a" path="res://assets/fonts/Kenney Mini.ttf" id="5_iywne"]
+[ext_resource type="AudioStream" uid="uid://te6g7mb78xe" path="res://assets/sounds/chess-pieces-clean.mp3" id="6_p57ef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
 bg_color = Color(0.29803923, 0.40784314, 0.52156866, 1)
@@ -126,6 +127,12 @@ text = "20"
 wait_time = 0.75
 one_shot = true
 
+[node name="Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_p57ef")
+volume_db = -8.0
+pitch_scale = 1.65
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="Cup/WinArea" to="." method="_on_win_area_body_entered"]
+[connection signal="body_entered" from="Ball" to="." method="_on_ball_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

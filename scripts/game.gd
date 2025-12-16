@@ -9,6 +9,7 @@ extends Node2D
 @onready var menu_button: Button = $MenuButton
 @onready var win_area: Area2D = $Cup/WinArea
 @onready var win_delay: Timer = $WinDelay
+@onready var impact: AudioStreamPlayer = $Impact
 
 var game_state: GameManager.State
 
@@ -30,6 +31,16 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if game_state == GameManager.State.PLAYING_20:
 		time_left.text = str(snappedf(timer.time_left, 0.1))
+
+
+func _play_impact() -> void:
+	if impact.playing:
+		return
+	impact.play()
+
+
+func _on_ball_body_entered(_body: Node) -> void:
+	_play_impact()
 
 
 func _on_win_area_body_entered(_body: Node2D) -> void:
