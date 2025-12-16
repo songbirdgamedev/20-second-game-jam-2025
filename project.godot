@@ -14,6 +14,7 @@ config/name="20 Second Game Jam 2025"
 run/main_scene="uid://blo5fawxw0emm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.22745098, 0.24705882, 0.36862746, 1)
+boot_splash/use_filter=false
 boot_splash/image="uid://dutkdw7ledysb"
 config/icon="res://icon.svg"
 
