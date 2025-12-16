@@ -56,6 +56,8 @@ func _on_win_area_body_entered(_body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
+	if GameManager.game_state == GameManager.State.PLAYING_ENDLESS:
+		return
 	if win_area.has_overlapping_bodies():
 		GameManager.time_left = win_delay.wait_time - win_delay.time_left
 	else:
